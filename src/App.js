@@ -5,9 +5,12 @@ import Featured from "./components/Featured";
 import Discounted from "./components/Discounted";
 import Explore from "./components/Explore";
 import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route } from "react-router-dom"
 
 function App() {
   return (
+    <Router>
+
     <div className="App">
      <Nav />
       <Landing />
@@ -17,6 +20,7 @@ function App() {
     <Explore />
     <Footer />
     </div>
+    </Router>
   );
 }
 
