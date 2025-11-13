@@ -19,7 +19,7 @@ const Books = () => {
                                 </select>
                             </div>
                             <div className="books">
-                                {Books.map(book => <Book book={book} key={book.id} />)}
+                                {books.map(book => <Book book={book} key={book.id} />)}
                             </div>
                         </div>
                     </div>
