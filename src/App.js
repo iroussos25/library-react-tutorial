@@ -5,9 +5,18 @@ import Home from "./Pages/Home";
 import Books from "./Pages/Books";
 import {books} from './data'
 import BookInfo from "./Pages/BookInfo";
+import Cart from "./Pages/Cart";
+import React, { useState } from "react";
 
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  function addToCart() {
+    console.log("Add to cart");
+  }
+
+
   return (
   <Router>
 
@@ -15,8 +24,9 @@ function App() {
      <Nav />
       <Route path= "/" exact component={Home} />
       <Route path= "/books" exact render ={() => <Books books={books} />}/>
-      <Route path="/books/:id" render={() =><BookInfo books={books} />} />
-           <Footer />
+      <Route path="/books/:id" render={() =><BookInfo books={books} />} addToCart={addToCart} />
+      <Route path="/cart" render={() => <Cart books={books} />} />     
+      <Footer />
     </div>
   </Router>
   );
