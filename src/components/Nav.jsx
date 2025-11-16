@@ -36,7 +36,7 @@ function closeMenu() {
                 <FontAwesomeIcon icon="shopping-cart" />
                 </Link>  
                 
-                 {numberOfItems > 0 && <span className="cart__length">{numberOfItems()}</span>}
+                 {numberOfItems() >0  && <span className="cart__length">{numberOfItems()}</span>}
              </li>
             </ul>
             <div className="menu__backdrop">
