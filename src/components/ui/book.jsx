@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import Price from './Price';
 
 const book=({book}) => {
+    const [img, setImg] = useState();
     function imageLoaded() {
         console.log('image loaded');
     }
@@ -35,14 +36,15 @@ return (
        />
 
 </>
-) : (
-    <> </>
-   ) }
+ ): (
+    <> 
+   
 <div className="book__img--skeleton"></div>
     <div className="skeleton book__title--skeleton"></div>
     <div className="skeleton book__rating--skeleton"></div>
     <div className="skeleton book__price--skeleton"></div>
-    
+    </>
+)}
 </div>
     );
 } ;
